@@ -31,6 +31,9 @@
     <!-- To Buy List -->
     <div class="col-md-6" ng-controller="ToBuyController as toBuyList">
      <h2>To Buy:</h2>
+     <input type="text" ng-model="toBuyList.name" placeholder="item name">
+     <input type="text" ng-model="toBuyList.quantity" placeholder="quantity">
+     <button ng-click="toBuyList.toBuyItem();">Add Item To Shopping List</button>
      <ul>
         <li ng-repeat="item in toBuyList.items">
           Buy {{item.quantity}} {{item.name}} <button ng-click="toBuyList.buyItem($index)"class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button>
